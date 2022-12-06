@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?><testsuite errors="2" failures="0" name="pytest" skipped="0" tests="2" time="18.656"><testcase classname="" file="test_dir/test_appium.py" name="test_dir.test_appium" time="0.000"><error message="collection failure">..\Automa_Python\lib\site-packages\urllib3\connection.py:175: in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+..\Automa_Python\lib\site-packages\urllib3\util\connection.py:95: in create_connection
+    raise err
+..\Automa_Python\lib\site-packages\urllib3\util\connection.py:85: in create_connection
+    sock.connect(sa)
+E   ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+During handling of the above exception, another exception occurred:
+..\Automa_Python\lib\site-packages\urllib3\connectionpool.py:710: in urlopen
+    chunked=chunked,
+..\Automa_Python\lib\site-packages\urllib3\connectionpool.py:398: in _make_request
+    conn.request(method, url, **httplib_request_kw)
+..\Automa_Python\lib\site-packages\urllib3\connection.py:239: in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+..\Automa_Python\lib\http\client.py:1229: in request
+    self._send_request(method, url, body, headers, encode_chunked)
+..\Automa_Python\lib\http\client.py:1275: in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+..\Automa_Python\lib\http\client.py:1224: in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+..\Automa_Python\lib\http\client.py:1016: in _send_output
+    self.send(msg)
+..\Automa_Python\lib\http\client.py:956: in send
+    self.connect()
+..\Automa_Python\lib\site-packages\urllib3\connection.py:205: in connect
+    conn = self._new_conn()
+..\Automa_Python\lib\site-packages\urllib3\connection.py:187: in _new_conn
+    self, &quot;Failed to establish a new connection: %s&quot; % e
+E   urllib3.exceptions.NewConnectionError: &lt;urllib3.connection.HTTPConnection object at 0x04723190&gt;: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+During handling of the above exception, another exception occurred:
+test_dir\test_appium.py:10: in &lt;module&gt;
+    from page.appium_setting import TestAppium
+page\appium_setting.py:8: in &lt;module&gt;
+    class TestAppium:
+page\appium_setting.py:19: in TestAppium
+    driver = webdriver.Remote(&quot;http://localhost:4723/wd/hub&quot;, caps)
+..\Automa_Python\lib\site-packages\appium\webdriver\webdriver.py:235: in __init__
+    options=options,
+..\Automa_Python\lib\site-packages\selenium\webdriver\remote\webdriver.py:272: in __init__
+    self.start_session(capabilities, browser_profile)
+..\Automa_Python\lib\site-packages\appium\webdriver\webdriver.py:320: in start_session
+    response = self.execute(RemoteCommand.NEW_SESSION, w3c_caps)
+..\Automa_Python\lib\site-packages\selenium\webdriver\remote\webdriver.py:427: in execute
+    response = self.command_executor.execute(driver_command, params)
+..\Automa_Python\lib\site-packages\selenium\webdriver\remote\remote_connection.py:344: in execute
+    return self._request(command_info[0], url, body=data)
+..\Automa_Python\lib\site-packages\selenium\webdriver\remote\remote_connection.py:366: in _request
+    response = self._conn.request(method, url, body=body, headers=headers)
+..\Automa_Python\lib\site-packages\urllib3\request.py:79: in request
+    method, url, fields=fields, headers=headers, **urlopen_kw
+..\Automa_Python\lib\site-packages\urllib3\request.py:170: in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+..\Automa_Python\lib\site-packages\urllib3\poolmanager.py:376: in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+..\Automa_Python\lib\site-packages\urllib3\connectionpool.py:828: in urlopen
+    **response_kw
+..\Automa_Python\lib\site-packages\urllib3\connectionpool.py:828: in urlopen
+    **response_kw
+..\Automa_Python\lib\site-packages\urllib3\connectionpool.py:828: in urlopen
+    **response_kw
+..\Automa_Python\lib\site-packages\urllib3\connectionpool.py:788: in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+..\Automa_Python\lib\site-packages\urllib3\util\retry.py:592: in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+E   urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host=&apos;localhost&apos;, port=4723): Max retries exceeded with url: /wd/hub/session (Caused by NewConnectionError(&apos;&lt;urllib3.connection.HTTPConnection object at 0x04723190&gt;: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。&apos;))</error></testcase><testcase classname="pytest" name="internal" time="0.000"><error message="internal error">Traceback (most recent call last):
+  File &quot;D:\masonfile\Automation_project\Automa_Python\lib\site-packages\_pytest\main.py&quot;, line 213, in wrap_session
+    session.exitstatus = doit(config, session) or 0
+  File &quot;D:\masonfile\Automation_project\Automa_Python\lib\site-packages\_pytest\main.py&quot;, line 256, in _main
+    config.hook.pytest_collection(session=session)
+  File &quot;D:\masonfile\Automation_project\Automa_Python\lib\site-packages\pluggy\hooks.py&quot;, line 286, in __call__
+    return self._hookexec(self, self.get_hookimpls(), kwargs)
+  File &quot;D:\masonfile\Automation_project\Automa_Python\lib\site-packages\pluggy\manager.py&quot;, line 93, in _hookexec
+    return self._inner_hookexec(hook, methods, kwargs)
+  File &quot;D:\masonfile\Automation_project\Automa_Python\lib\site-packages\pluggy\manager.py&quot;, line 87, in &lt;lambda&gt;
+    firstresult=hook.spec.opts.get(&quot;firstresult&quot;) if hook.spec else False,
+  File &quot;D:\masonfile\Automation_project\Automa_Python\lib\site-packages\pluggy\callers.py&quot;, line 208, in _multicall
+    return outcome.get_result()
+  File &quot;D:\masonfile\Automation_project\Automa_Python\lib\site-packages\pluggy\callers.py&quot;, line 80, in get_result
+    raise ex[1].with_traceback(ex[2])
+  File &quot;D:\masonfile\Automation_project\Automa_Python\lib\site-packages\pluggy\callers.py&quot;, line 187, in _multicall
+    res = hook_impl.function(*args)
+  File &quot;D:\masonfile\Automation_project\Automa_Python\lib\site-packages\_pytest\main.py&quot;, line 266, in pytest_collection
+    return session.perform_collect()
+  File &quot;D:\masonfile\Automation_project\Automa_Python\lib\site-packages\_pytest\main.py&quot;, line 459, in perform_collect
+    items = self._perform_collect(args, genitems)
+  File &quot;D:\masonfile\Automation_project\Automa_Python\lib\site-packages\_pytest\main.py&quot;, line 498, in _perform_collect
+    self.items.extend(self.genitems(node))
+  File &quot;D:\masonfile\Automation_project\Automa_Python\lib\site-packages\_pytest\main.py&quot;, line 720, in genitems
+    yield from self.genitems(subnode)
+  File &quot;D:\masonfile\Automation_project\Automa_Python\lib\site-packages\_pytest\main.py&quot;, line 721, in genitems
+    node.ihook.pytest_collectreport(report=rep)
+  File &quot;D:\masonfile\Automation_project\Automa_Python\lib\site-packages\pluggy\hooks.py&quot;, line 286, in __call__
+    return self._hookexec(self, self.get_hookimpls(), kwargs)
+  File &quot;D:\masonfile\Automation_project\Automa_Python\lib\site-packages\pluggy\manager.py&quot;, line 93, in _hookexec
+    return self._inner_hookexec(hook, methods, kwargs)
+  File &quot;D:\masonfile\Automation_project\Automa_Python\lib\site-packages\pluggy\manager.py&quot;, line 87, in &lt;lambda&gt;
+    firstresult=hook.spec.opts.get(&quot;firstresult&quot;) if hook.spec else False,
+  File &quot;D:\masonfile\Automation_project\Automa_Python\lib\site-packages\pluggy\callers.py&quot;, line 208, in _multicall
+    return outcome.get_result()
+  File &quot;D:\masonfile\Automation_project\Automa_Python\lib\site-packages\pluggy\callers.py&quot;, line 80, in get_result
+    raise ex[1].with_traceback(ex[2])
+  File &quot;D:\masonfile\Automation_project\Automa_Python\lib\site-packages\pluggy\callers.py&quot;, line 187, in _multicall
+    res = hook_impl.function(*args)
+  File &quot;D:\masonfile\Automation_project\Automa_Python\lib\site-packages\pytest_html\plugin.py&quot;, line 512, in pytest_collectreport
+    self.append_failed(report)
+  File &quot;D:\masonfile\Automation_project\Automa_Python\lib\site-packages\pytest_html\plugin.py&quot;, line 297, in append_failed
+    self._appendrow(&apos;Error&apos;, report)
+  File &quot;D:\masonfile\Automation_project\Automa_Python\lib\site-packages\pytest_html\plugin.py&quot;, line 266, in _appendrow
+    result = self.TestResult(outcome, report, self.logfile, self.config)
+  File &quot;D:\masonfile\Automation_project\Automa_Python\lib\site-packages\pytest_html\plugin.py&quot;, line 130, in __init__
+    report=report, cells=cells)
+  File &quot;D:\masonfile\Automation_project\Automa_Python\lib\site-packages\pluggy\hooks.py&quot;, line 286, in __call__
+    return self._hookexec(self, self.get_hookimpls(), kwargs)
+  File &quot;D:\masonfile\Automation_project\Automa_Python\lib\site-packages\pluggy\manager.py&quot;, line 93, in _hookexec
+    return self._inner_hookexec(hook, methods, kwargs)
+  File &quot;D:\masonfile\Automation_project\Automa_Python\lib\site-packages\pluggy\manager.py&quot;, line 87, in &lt;lambda&gt;
+    firstresult=hook.spec.opts.get(&quot;firstresult&quot;) if hook.spec else False,
+  File &quot;D:\masonfile\Automation_project\Automa_Python\lib\site-packages\pluggy\callers.py&quot;, line 208, in _multicall
+    return outcome.get_result()
+  File &quot;D:\masonfile\Automation_project\Automa_Python\lib\site-packages\pluggy\callers.py&quot;, line 80, in get_result
+    raise ex[1].with_traceback(ex[2])
+  File &quot;D:\masonfile\Automation_project\Automa_Python\lib\site-packages\pluggy\callers.py&quot;, line 187, in _multicall
+    res = hook_impl.function(*args)
+  File &quot;D:\masonfile\Automation_project\Auto_Project\conftest.py&quot;, line 52, in pytest_html_results_table_row
+    cells.insert(2, html.td(report.description))
+AttributeError: &apos;CollectReport&apos; object has no attribute &apos;description&apos;</error></testcase></testsuite>
